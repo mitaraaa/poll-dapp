@@ -1,0 +1,99 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 840px;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    h1 {
+        margin: 0;
+
+        font-family: "GT Walsheim Pro", sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        font-style: normal;
+        line-height: normal;
+        color: #FFF;
+        letter-spacing: -1.44px;
+    }
+
+    .vote {
+        padding: 6px 60px;
+        font-size: 24px;
+        background: #D6B3FF;
+
+        &:disabled {
+            cursor: not-allowed;
+            background: rgba($color: #D6B3FF, $alpha: 30%);
+    
+            &:hover {
+                background: rgba($color: #D6B3FF, $alpha: 30%);
+            }
+        }
+    }
+
+    button.close {
+        cursor: pointer;
+        background: none;
+        border: none;
+        outline: none;
+    }
+}
+
+.poll {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5px;
+    width: 610px;
+}
+
+.voted, .closed {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 300;
+
+    opacity: 0.2;
+}
+
+.finder {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+
+    input {
+        padding: 6px 20px;
+
+        font-family: "GT Walsheim Pro", sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        font-style: normal;
+        line-height: normal;
+        color: #fff;
+        letter-spacing: -0.48px;
+
+        background: rgb(214 179 255 / 5%);
+        border: none;
+        border-radius: 4px;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    a {
+        border-radius: 4px;
+    }
+}

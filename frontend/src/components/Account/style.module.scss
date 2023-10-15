@@ -1,0 +1,82 @@
+.account {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    padding: 10px 20px;
+
+    background: rgb(214 179 255 / 5%);
+    border: none;
+    border: 1px solid rgb(0 0 0 / 20%);
+    border-radius: 10px;
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+.balance {
+    font-family: "GT Walsheim Pro", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: normal;
+    color: #FFF;
+    text-align: center;
+}
+
+.address {
+    cursor: pointer;
+
+    display: flex;
+    gap: 4px;
+    align-items: center;
+
+    font-family: "GT Walsheim Pro", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    color: #FFF;
+    text-align: center;
+
+    opacity: 0.4;
+
+    transition: 100ms;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.popover {
+    padding: 4px;
+
+    font-size: 12px;
+    color: black;
+
+    background: rgb(214 179 255);
+    border: none;
+    border-radius: 4px;
+
+    animation: slide 100ms ease-in-out;
+}
+
+.arrow {
+    fill: rgb(214 179 255);
+}
+
+@keyframes slide {
+    from {
+        transform: translateY(2px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

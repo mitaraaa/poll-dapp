@@ -1,0 +1,223 @@
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable keyframes-name-pattern */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 840px;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    height: 100%;
+}
+
+.form {
+    min-width: 400px;
+}
+
+.label {
+    font-family: "GT Walsheim Pro", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.48px;
+}
+
+.input {
+    font-family: "GT Walsheim Pro", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.48px;
+
+    background: none;
+    border: none;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.button {
+    background: #D6B3FF;
+
+    &:disabled {
+        cursor: not-allowed;
+        background: rgba($color: #D6B3FF, $alpha: 30%);
+
+        &:hover {
+            background: rgba($color: #D6B3FF, $alpha: 30%);
+        }
+    }
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    justify-content: flex-start;
+}
+
+.add {
+    cursor: pointer;
+    user-select: none;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    min-width: 400px;
+    padding: 0 10px ;
+
+    font-family: "GT Walsheim Pro", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: normal;
+    color: #D6B3FF;
+    letter-spacing: -0.42px;
+
+    background: none;
+    border: none;
+    border-radius: 4px;
+
+    &:hover {
+        color: #FFF;
+    }
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba($color: #000, $alpha: 80%);
+    animation: overlayShow 150ms;
+}
+
+.dialogContent {
+    position: absolute;
+    top: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 40px;
+
+    background-color: #1B1B1B;
+    border: none;
+    border-radius: 10px;
+
+    h2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0;
+
+        button {
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+    }
+
+}
+
+.contract {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    span {
+        cursor: pointer;
+
+        display: inline-flex;
+        flex-direction: row;
+        gap: 4px;
+        align-items: center;
+
+        padding: 6px;
+
+        font-family: "GT Walsheim Pro", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: normal;
+        color: rgb(255 255 255 / 80%);
+        text-align: center;
+
+        background: rgb(214 179 255 / 5%);
+        border: none;
+        border-radius: 4px;
+
+        transition: 100ms;
+
+        &:hover {
+            color: #fff;
+            background: rgb(255 255 255 / 20%);
+
+        }
+    }
+}
+
+.dialogDescription {
+    opacity: 0.6;
+}
+
+@keyframes overlayShow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.popover {
+    padding: 4px;
+
+    font-size: 12px;
+    color: black;
+
+    background: rgb(214 179 255);
+    border: none;
+    border-radius: 4px;
+
+    animation: slide 100ms ease-in-out;
+}
+
+.arrow {
+    fill: rgb(214 179 255);
+}
+
+@keyframes slide {
+    from {
+        transform: translateY(2px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.address {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+}

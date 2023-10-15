@@ -1,0 +1,42 @@
+.option {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    min-width: 400px;
+    padding: 10px;
+
+    background: rgb(214 179 255 / 5%);
+    border: none;
+    border-radius: 4px;
+}
+
+.input {
+    width: 100%;
+
+    font-family: "GT Walsheim Pro", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: normal;
+    color: #FFF;
+    letter-spacing: -0.42px;
+
+    background: none;
+    border: none;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.remove {
+    width: 15px;
+    height: 15px;
+    color: #D6B3FF;
+    outline: none;
+}
+
+.remove:hover {
+    color: #FFF;
+}
